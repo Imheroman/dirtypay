@@ -1,0 +1,23 @@
+package com.dirtypay.domain.store.dto.request;
+
+import com.dirtypay.domain.store.entity.StoreOrderStatus;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+/**
+ * 매장 주문 상태 변경 요청 DTO.
+ *
+ * @author kim-young-woong
+ * @since 1.0.0
+ */
+@Getter
+@NoArgsConstructor
+public class StoreOrderStatusChangeRequest {
+
+    /**
+     * 변경할 주문 상태. 필수.
+     */
+    @NotNull(message = "주문 상태는 필수입니다")
+    private StoreOrderStatus status;
+}
